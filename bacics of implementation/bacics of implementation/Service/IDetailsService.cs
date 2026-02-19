@@ -4,6 +4,6 @@ namespace bacics_of_implementation.Service
 {
     public interface IDetailsService
     {
-        IEnumerable<details> GetDetails();
+       Task<IEnumerable<details>> GetDetailsAsync();
     }
 }

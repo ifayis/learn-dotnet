@@ -12,9 +12,9 @@ namespace bacics_of_implementation.Service
             _detailsRepository = repository;
         }
 
-        public IEnumerable<details> GetAll()
+        public async Task<IEnumerable<details>> GetDetailsAsync()
         {
-            return _detailsRepository.GetAll();
+           return await _detailsRepository.GetAll();
         }
 
     }

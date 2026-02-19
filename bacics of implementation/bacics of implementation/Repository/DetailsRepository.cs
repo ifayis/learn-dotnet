@@ -10,9 +10,10 @@ namespace bacics_of_implementation.Repository
             new details { name = "jithin", age = 25, department = "flutter" }
         };
 
-        public IEnumerable<details> GetAll()
+        public async Task<IEnumerable<details>> GetAll()
         {
+            await Task.Delay(10);
             return Details;
         }
-    }
+    }   
 }
