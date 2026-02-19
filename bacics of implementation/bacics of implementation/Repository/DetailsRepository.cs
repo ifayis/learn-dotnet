@@ -2,7 +2,7 @@
 
 namespace bacics_of_implementation.Repository
 {
-    public class DetailsRepository : IDetialsRepository
+    public class DetailsRepository : IDetailsRepository
     {
         private readonly List<details> Details = new()
         {
