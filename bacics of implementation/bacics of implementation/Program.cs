@@ -1,3 +1,4 @@
+using bacics_of_implementation.Repository;
 using bacics_of_implementation.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IHelloService, HelloService>();
+builder.Services.AddScoped<IDetailsRepository, DetailsRepository>();
+builder.Services.AddScoped<IDetailsService, DetailsService>();
 
 var app = builder.Build();
 
