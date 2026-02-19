@@ -1,0 +1,6 @@
+@bacics_of_implementation_HostAddress = http://localhost:5175
+
+GET {{bacics_of_implementation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
