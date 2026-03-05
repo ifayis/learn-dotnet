@@ -1,3 +1,4 @@
+using bacics_of_implementation.Middlewares;
 using bacics_of_implementation.Repository;
 using bacics_of_implementation.Service;
 
@@ -24,6 +25,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<LoggingMiddleware>();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
