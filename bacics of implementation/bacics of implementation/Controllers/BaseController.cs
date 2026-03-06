@@ -30,10 +30,15 @@ namespace bacics_of_implementation.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public IActionResult Deletereport(Person pers)
+        [HttpDelete("{id}")]
+        public IActionResult Deletereport(int id)
         {
-            person.Remove(pers);
+            var removeperson = person.FirstOrDefault(p => p.id == id);
+            if (removeperson == null)
+            {
+                return NotFound();
+            }
+            person.Remove(removeperson);
             return Ok();
         }
     }
