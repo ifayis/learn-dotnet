@@ -4,7 +4,12 @@
     {
         public string SayHello(string name)
         {
-            return $" Hello {name}, How are You!.";
+            return $" Hello {name}, How are You !.";
+        }
+
+        public string goodbye(string names)
+        {
+            return $" See you later {names}, goodbye !. ";
         }
     }
 }

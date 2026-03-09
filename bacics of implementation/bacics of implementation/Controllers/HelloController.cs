@@ -1,5 +1,6 @@
 ﻿using bacics_of_implementation.Service;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace bacics_of_implementation.Controllers
 {
@@ -19,6 +20,12 @@ namespace bacics_of_implementation.Controllers
         {
             var result = _HelloService.SayHello(name);
             return Ok(result);
+        }
+
+        [HttpGet("{names}")]
+        public async Task<IActionResult> saygoodbye(string names)
+        {
+            return Ok(_HelloService.goodbye(names));
         }
     }
 }

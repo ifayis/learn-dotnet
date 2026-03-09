@@ -3,5 +3,6 @@
     public interface IHelloService
     {
        string SayHello(string name);
+       string goodbye(string names);
     }
 }
