@@ -7,9 +7,9 @@
             return $" Hello {name}, How are You !.";
         }
 
-        public string goodbye(string names)
+        public string goodbye()
         {
-            return $" See you later {names}, goodbye !. ";
+            return " See you later, goodbye !. ";
         }
     }
 }

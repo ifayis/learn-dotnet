@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using static bacics_of_implementation.Controllers.BaseController;
 
 namespace bacics_of_implementation.Controllers
 {
@@ -12,9 +11,11 @@ namespace bacics_of_implementation.Controllers
             public int id { get; set; }
             public string name { get; set; }
         }
+
         static List<Person> person = new List<Person>
-               {
-               };
+        {
+        };
+
         [HttpGet]
         public IActionResult report()
         {

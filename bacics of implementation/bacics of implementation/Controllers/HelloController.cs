@@ -22,10 +22,10 @@ namespace bacics_of_implementation.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{names}")]
-        public async Task<IActionResult> saygoodbye(string names)
+        [HttpGet]
+        public async Task<IActionResult> saygoodbye()
         {
-            return Ok(_HelloService.goodbye(names));
+            return Ok(_HelloService.goodbye());
         }
     }
 }
