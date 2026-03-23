@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IHelloService, HelloService>();
 builder.Services.AddScoped<IDetailsRepository, DetailsRepository>();
 builder.Services.AddScoped<IDetailsService, DetailsService>();
+builder.Services.AddScoped<ItestService, testService>();
 
 var app = builder.Build();
 
@@ -26,8 +27,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<LoggingMiddleware>();
-app.UseMiddleware<CustomMiddleware>();
+//app.UseMiddleware<LoggingMiddleware>();
+//app.UseMiddleware<CustomMiddleware>();
 
 app.UseAuthentication();
 
